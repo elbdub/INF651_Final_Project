@@ -8,6 +8,25 @@
     <title>Weather App</title>
 </head>
 <body>
+    <main>
+        <section class="enterDestinationInfo">
+            <form id="zipCode">
+                <label for="zipCode">Zipcode</label>
+                <input id="zipCode" type="text" size="40" autocomplete="off" placeholder="ZipCode" tabindex="0"/>    
+            </form>
+            <form id="city">
+                <label for="city">City</label>
+                <input id="city" type="text" size="40" autocomplete="off" placeholder="City" tabindex="0"/>    
+            </form>
+            <form id="state">
+                <label for="state">State</label>
+                <input id="state" type="text" size="40" autocomplete="off" placeholder="State" tabindex="0"/>    
+            </form>
+            <button id="getWeather" class="button" title="Get Weather Data" aria-label="Get weather for the city and state provided" tabindex="0">+</button>    
+        </section>
+        
+    </main>
+
     <p>this is a weather app</p>
 </body>
 </html>
