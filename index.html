@@ -9,24 +9,78 @@
 </head>
 <body>
     <main>
+        <h1 name="Intro">Welcome to Elliott's weather app!</h1>
         <section class="enterDestinationInfo">
-            <form id="zipCode">
+            <p name="getDestintionInfo">Please enter a zipcode or the city and state:</p>
+            <form id="currentCityInfo">
                 <label for="zipCode">Zipcode</label>
                 <input id="zipCode" type="text" size="40" autocomplete="off" placeholder="ZipCode" tabindex="0"/>    
-            </form>
-            <form id="city">
                 <label for="city">City</label>
                 <input id="city" type="text" size="40" autocomplete="off" placeholder="City" tabindex="0"/>    
-            </form>
-            <form id="state">
                 <label for="state">State</label>
                 <input id="state" type="text" size="40" autocomplete="off" placeholder="State" tabindex="0"/>    
+                <button id="getWeather" class="button" title="Get Weather Data" aria-label="Get weather for the city and state provided" tabindex="0">Get Weather</button>    
+                <button id="setDefaultLocation" class="button" title="Set as Default" aria-label="Set the current location as the default" tabindex="0">Set as Default</button>
             </form>
-            <button id="getWeather" class="button" title="Get Weather Data" aria-label="Get weather for the city and state provided" tabindex="0">+</button>    
+            
         </section>
-        
+
+        <hr />
+        <section class="currentWeatherContainer">
+            <div class="currentWeather">
+                <h2 tabindex="0">Current Weather</h2>
+               
+                <div class="currentCityWeather">
+                    <div id="currentCityName" type="text" id="1" tabindex="0" aria-label="Name of the selected city">Current City Name</div>
+                    <div id="currentCityDescription" id="2" tabindex="0" aria-label="Description for the selected city">Current City Desc</div>
+                    <div id="currentCityWeatherIcon" id="3" tabindex="0" aria-label="Current Weather Icon"></div>
+                    <div id="currentCityTemp" id="4" tabindex="0" aria-label="Temperature for the selected city">Current City Temp</div>
+                    <div id="currentCityFeelsLike" id="5" tabindex="0" aria-label="Feels like temperature for the selected city">Current City Feels Like</div>
+                    
+                </div>
+
+                <div class="currentWeatherAdditional" tabindex="0" aria-label="Additional current weather details">
+                    <!-- <table id="currentWeatherAdditionalInfo">
+                        <th name="currentCityHigh" id="1" tabindex="0" aria-label="High Temperature for the selected city">High: </th>
+                        <th name="currentCityLow" id="2" tabindex="0" aria-label="Low Temperature for the selected city">Low: </th>
+                        <th name="currentCityHumidity" id="3" tabindex="0" aria-label="Humidity for the selected city">Humidity: </th>
+                        <th name="currentCityWind" id="4" tabindex="0" aria-label="Wind for the selected city">Wind: </th>
+                        <th name="currentCitySunrise" id="5" tabindex="0" aria-label="Sunrise for the selected city">Sunrise: </th>
+                        <th name="currentCitySunset" id="6" tabindex="0" aria-label="Sunset for the selected city">Sunset: </th>
+
+                    </table> -->
+                    
+                    <div id="currentCityHigh" id="1" tabindex="0" aria-label="High Temperature for the selected city">High:</div>
+                    
+                    <div id="currentCityLow" id="3" tabindex="0" aria-label="Low Temperature for the selected city">Low:</div>
+                    <!-- <div id="currentCityWind" id="3" tabindex="0" aria-label="Wind for the selected city">Wind:</div> -->
+                    <div id="currentCityHumidity" id="4" tabindex="0" aria-label="Humidity for the selected city">Humidity:</div>
+                    <!-- <div id="currentCitySunrise" id="5" tabindex="0" aria-label="Sunrise for the selected city">Sunrise:</div> -->
+                    <!-- <div id="currentCitySunset" id="6" tabindex="0" aria-label="Sunset for the selected city">Sunset:</div> -->
+            
+                </div>
+                
+            </div>
+            <hr/>
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+        </section>
+        <section class="fiveDayForecastContainer">
+            <div class="fiveDayForecast">
+                <h2 tabindex="0">5 Day forecast</h2>
+                <div class="fiveDayForecastInfo" id="1" tabindex="0" aria-label="Five day forecast for the selected city">
+                    <div id="todayPlus1Max" id="2" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus1</div>
+                    <div id="todayPlus1Min" id="2" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus1</div>
+                    <div id="todayPlus2Max" id="3" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus2</div>
+                    <div id="todayPlus2Min" id="3" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus2</div>
+                    <div id="todayPlus3Max" id="4" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus3</div>
+                    <div id="todayPlus3Min" id="4" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus3</div>
+                    <div id="todayPlus4Max" id="5" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus4</div>
+                    <div id="todayPlus4Min" id="5" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus4</div>
+                    <div id="todayPlus5Max" id="6" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus5</div>
+                    <div id="todayPlus5Min" id="6" tabindex="0" aria-label="Temperature {day of the week} for the selected city">todayPlus5</div>
+                </div>
     </main>
 
-    <p>this is a weather app</p>
+    
 </body>
 </html>
